@@ -1,11 +1,97 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Generic_Conn_01x03
+# Device_R_Small
 #
-DEF Connector_Generic_Conn_01x03 J 0 40 Y N 1 F N
+DEF Device_R_Small R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_+3V3-power
+#
+DEF speedometer-rescue_+3V3-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "speedometer-rescue_+3V3-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_+BATT-power
+#
+DEF speedometer-rescue_+BATT-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "speedometer-rescue_+BATT-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +BATT 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_Battery_Cell-Device
+#
+DEF speedometer-rescue_Battery_Cell-Device BT 0 0 N N 1 F N
+F0 "BT" 100 100 50 H V L CNN
+F1 "speedometer-rescue_Battery_Cell-Device" 100 0 50 H V L CNN
+F2 "" 0 60 50 V I C CNN
+F3 "" 0 60 50 V I C CNN
+DRAW
+S -90 70 90 60 0 1 0 F
+S -62 47 58 27 0 1 0 F
+P 2 0 1 0 0 30 0 0 N
+P 2 0 1 0 0 70 0 100 N
+P 2 0 1 10 20 135 60 135 N
+P 2 0 1 10 40 155 40 115 N
+X + 1 0 200 100 D 50 50 1 1 P
+X - 2 0 -100 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_Buzzer-Device
+#
+DEF speedometer-rescue_Buzzer-Device BZ 0 1 Y N 1 F N
+F0 "BZ" 150 50 50 H V L CNN
+F1 "speedometer-rescue_Buzzer-Device" 150 -50 50 H V L CNN
+F2 "" -25 100 50 V I C CNN
+F3 "" -25 100 50 V I C CNN
+$FPLIST
+ *Buzzer*
+$ENDFPLIST
+DRAW
+A 0 0 125 -899 899 0 1 0 N 0 -125 0 125
+P 2 0 1 0 -65 75 -45 75 N
+P 2 0 1 0 -55 85 -55 65 N
+P 2 0 1 0 0 125 0 -125 N
+X - 1 -100 100 100 R 50 50 1 1 P
+X + 2 -100 -100 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_Conn_01x03-Connector_Generic
+#
+DEF speedometer-rescue_Conn_01x03-Connector_Generic J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Generic_Conn_01x03" 0 -200 50 H V C CNN
+F1 "speedometer-rescue_Conn_01x03-Connector_Generic" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -22,50 +108,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Battery_Cell
+# speedometer-rescue_D_Small-Device
 #
-DEF Device_Battery_Cell BT 0 0 N N 1 F N
-F0 "BT" 100 100 50 H V L CNN
-F1 "Device_Battery_Cell" 100 0 50 H V L CNN
-F2 "" 0 60 50 V I C CNN
-F3 "" 0 60 50 V I C CNN
-DRAW
-S -90 70 90 60 0 1 0 F
-S -62 47 58 27 0 1 0 F
-P 2 0 1 0 0 30 0 0 N
-P 2 0 1 0 0 70 0 100 N
-P 2 0 1 10 20 135 60 135 N
-P 2 0 1 10 40 155 40 115 N
-X + 1 0 200 100 D 50 50 1 1 P
-X - 2 0 -100 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Buzzer
-#
-DEF Device_Buzzer BZ 0 1 Y N 1 F N
-F0 "BZ" 150 50 50 H V L CNN
-F1 "Device_Buzzer" 150 -50 50 H V L CNN
-F2 "" -25 100 50 V I C CNN
-F3 "" -25 100 50 V I C CNN
-$FPLIST
- *Buzzer*
-$ENDFPLIST
-DRAW
-A 0 0 125 -899 899 0 1 0 N 0 -125 0 125
-P 2 0 1 0 -65 75 -45 75 N
-P 2 0 1 0 -55 85 -55 65 N
-P 2 0 1 0 0 125 0 -125 N
-X - 1 -100 100 100 R 50 50 1 1 P
-X + 2 -100 -100 100 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_D_Small
-#
-DEF Device_D_Small D 0 10 N N 1 F N
+DEF speedometer-rescue_D_Small-Device D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
-F1 "Device_D_Small" -150 -80 50 H V L CNN
+F1 "speedometer-rescue_D_Small-Device" -150 -80 50 H V L CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
 $FPLIST
@@ -83,11 +130,24 @@ X A 2 100 0 70 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED
+# speedometer-rescue_GND-power
 #
-DEF Device_LED D 0 40 N N 1 F N
+DEF speedometer-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "speedometer-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_LED-Device
+#
+DEF speedometer-rescue_LED-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_LED" 0 -100 50 H V C CNN
+F1 "speedometer-rescue_LED-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -106,11 +166,39 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_NPN_BEC
+# speedometer-rescue_MountingHole-Mechanical
 #
-DEF Device_Q_NPN_BEC Q 0 0 Y N 1 F N
+DEF speedometer-rescue_MountingHole-Mechanical H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "speedometer-rescue_MountingHole-Mechanical" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_PWR_FLAG-power
+#
+DEF speedometer-rescue_PWR_FLAG-power #FLG 0 0 N N 1 F P
+F0 "#FLG" 0 75 50 H I C CNN
+F1 "speedometer-rescue_PWR_FLAG-power" 0 150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
+X pwr 1 0 0 0 U 50 50 0 0 w
+ENDDRAW
+ENDDEF
+#
+# speedometer-rescue_Q_NPN_BEC-Device
+#
+DEF speedometer-rescue_Q_NPN_BEC-Device Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_NPN_BEC" 200 -50 50 H V L CNN
+F1 "speedometer-rescue_Q_NPN_BEC-Device" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -125,11 +213,11 @@ X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_PMOS_GSD
+# speedometer-rescue_Q_PMOS_GSD-Device
 #
-DEF Device_Q_PMOS_GSD Q 0 0 Y N 1 F N
+DEF speedometer-rescue_Q_PMOS_GSD-Device Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_PMOS_GSD" 200 -50 50 H V L CNN
+F1 "speedometer-rescue_Q_PMOS_GSD-Device" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -153,11 +241,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_PNP_BEC
+# speedometer-rescue_Q_PNP_BEC-Device
 #
-DEF Device_Q_PNP_BEC Q 0 0 Y N 1 F N
+DEF speedometer-rescue_Q_PNP_BEC-Device Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_PNP_BEC" 200 -50 50 H V L CNN
+F1 "speedometer-rescue_Q_PNP_BEC-Device" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -172,11 +260,11 @@ X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_Photo_NPN_EC
+# speedometer-rescue_Q_Photo_NPN_EC-Device
 #
-DEF Device_Q_Photo_NPN_EC Q 0 0 Y N 1 F N
+DEF speedometer-rescue_Q_Photo_NPN_EC-Device Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_Photo_NPN_EC" 200 -50 50 H V L CNN
+F1 "speedometer-rescue_Q_Photo_NPN_EC-Device" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -194,11 +282,11 @@ X C 2 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R_Small
+# speedometer-rescue_R_Small-Device
 #
-DEF Device_R_Small R 0 10 N N 1 F N
+DEF speedometer-rescue_R_Small-Device R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
+F1 "speedometer-rescue_R_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -211,26 +299,11 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Mechanical_MountingHole
+# speedometer-rescue_SW_Push-Switch
 #
-DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
-F0 "H" 0 200 50 H V C CNN
-F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- MountingHole*
-$ENDFPLIST
-DRAW
-C 0 0 50 0 1 50 N
-ENDDRAW
-ENDDEF
-#
-# Switch_SW_Push
-#
-DEF Switch_SW_Push SW 0 40 N N 1 F N
+DEF speedometer-rescue_SW_Push-Switch SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
+F1 "speedometer-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -240,63 +313,6 @@ P 2 0 1 0 0 50 0 120 N
 P 2 0 1 0 100 50 -100 50 N
 X 1 1 -200 0 100 R 50 50 0 1 P
 X 2 2 200 0 100 L 50 50 0 1 P
-ENDDRAW
-ENDDEF
-#
-# power_+3V3
-#
-DEF power_+3V3 #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3V3" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+BATT
-#
-DEF power_+BATT #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+BATT" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +BATT 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_GND
-#
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_PWR_FLAG
-#
-DEF power_PWR_FLAG #FLG 0 0 N N 1 F P
-F0 "#FLG" 0 75 50 H I C CNN
-F1 "power_PWR_FLAG" 0 150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 50 -40 75 0 100 40 75 0 50 N
-X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #

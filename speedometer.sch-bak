@@ -1209,10 +1209,10 @@ Wire Bus Line
 Wire Bus Line
 	1800 3500 1800 5500
 $Comp
-L speedometer-rescue:MountingHole-Mechanical H5
+L speedometer-rescue:MountingHole-Mechanical H?
 U 1 1 636BBEAD
 P 4500 7000
-F 0 "H5" H 4600 7046 50  0000 L CNN
+F 0 "H?" H 4600 7046 50  0000 L CNN
 F 1 "MountingHole" H 4600 6955 50  0000 L CNN
 F 2 "myLib:MountingHole_3.2mm_M3_noResist" H 4500 7000 50  0001 C CNN
 F 3 "~" H 4500 7000 50  0001 C CNN
@@ -1220,10 +1220,10 @@ F 3 "~" H 4500 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L speedometer-rescue:MountingHole-Mechanical H6
+L speedometer-rescue:MountingHole-Mechanical H?
 U 1 1 636BC5DC
 P 4500 7500
-F 0 "H6" H 4600 7546 50  0000 L CNN
+F 0 "H?" H 4600 7546 50  0000 L CNN
 F 1 "MountingHole" H 4600 7455 50  0000 L CNN
 F 2 "myLib:MountingHole_3.2mm_M3_noResist" H 4500 7500 50  0001 C CNN
 F 3 "~" H 4500 7500 50  0001 C CNN
@@ -1231,10 +1231,10 @@ F 3 "~" H 4500 7500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L speedometer-rescue:MountingHole-Mechanical H7
+L speedometer-rescue:MountingHole-Mechanical H?
 U 1 1 636BCA20
 P 5500 7000
-F 0 "H7" H 5600 7046 50  0000 L CNN
+F 0 "H?" H 5600 7046 50  0000 L CNN
 F 1 "MountingHole" H 5600 6955 50  0000 L CNN
 F 2 "myLib:MountingHole_3.2mm_M3_noResist" H 5500 7000 50  0001 C CNN
 F 3 "~" H 5500 7000 50  0001 C CNN
@@ -1242,10 +1242,10 @@ F 3 "~" H 5500 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L speedometer-rescue:MountingHole-Mechanical H8
+L speedometer-rescue:MountingHole-Mechanical H?
 U 1 1 636BD08D
 P 5500 7500
-F 0 "H8" H 5600 7546 50  0000 L CNN
+F 0 "H?" H 5600 7546 50  0000 L CNN
 F 1 "MountingHole" H 5600 7455 50  0000 L CNN
 F 2 "myLib:MountingHole_3.2mm_M3_noResist" H 5500 7500 50  0001 C CNN
 F 3 "~" H 5500 7500 50  0001 C CNN
