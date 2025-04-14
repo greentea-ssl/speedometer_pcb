@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name symbol)(type Legacy)(uri ${KIPRJMOD}/library/symbol.lib)(options "")(descr ""))
+  (lib (name speedometer-rescue)(type Legacy)(uri ${KIPRJMOD}/speedometer-rescue.lib)(options "")(descr ""))
+)
